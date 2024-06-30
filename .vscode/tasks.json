@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Task: Build and Run",
+            "type": "shell",
+            "command": "task",
+            "problemMatcher": [
+                "$go"
+            ]
+        },
+        {
+            "label": "Task: Build",
+            "type": "shell",
+            "command": "task build",
+            "problemMatcher": [
+                "$go"
+            ]
+        },
+        {
+            "label": "Task: Run",
+            "type": "shell",
+            "command": "task run"
+        }
+    ]
+}
