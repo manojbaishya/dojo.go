@@ -16,8 +16,8 @@
 
 !README.md
 !LICENSE
-
-# !Makefile
+!taskfile.yml
+!.vscode/tasks.json
 
 # ...even if they are in subdirectories
 !*/
