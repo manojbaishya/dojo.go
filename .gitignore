@@ -15,7 +15,8 @@
 !go.mod
 
 !README.md
-!LICENSE
+!LICENSE.txt
+
 !taskfile.yml
 !.vscode/tasks.json
 
