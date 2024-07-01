@@ -3,10 +3,15 @@ package text
 import (
 	"fmt"
 
-	"github.com/google/uuid"
-
 	lorem "github.com/derektata/lorem/ipsum"
+	"github.com/go-faker/faker/v4"
+	"github.com/google/uuid"
 )
+
+func textPkg() {
+	PrintUuids()
+	LoremGenerator()
+}
 
 func PrintUuids() {
 	for i := 0; i < 5; i++ {
@@ -28,4 +33,16 @@ func LoremGenerator() {
 	// Generate paragraphs
 	paragraphs := g.GenerateParagraphs(3)
 	fmt.Println(paragraphs)
+}
+
+func GenerateUuid() string {
+	return uuid.NewString()
+}
+
+func GenerateFakeStrings(num int) []string {
+	data := make([]string, num)
+	for i := 0; i < num; i++ {
+		data = append(data, faker.Word())
+	}
+	return data
 }
