@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	text.Lorem()
 	tour.ATourOfGo()
 }

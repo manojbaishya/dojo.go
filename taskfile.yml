@@ -4,16 +4,20 @@ version: '3'
 
 vars:
   BIN: dojo
+  MAIN: dojo.go
 
 tasks:
   default:
     cmds:
       - task: build
-      - task: run
+      - task: exec
+  run:
+    cmds:
+      - go run {{.MAIN}}
   build:
     cmds:
       - go build -o {{.BIN}}
-  run:
+  exec:
     cmds:
       - ./{{.BIN}}
   clean:
