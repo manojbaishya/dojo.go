@@ -1,4 +1,4 @@
-package leetcodedsa
+package dsa
 
 import (
 	"fmt"

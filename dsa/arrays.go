@@ -1,4 +1,4 @@
-package leetcodedsa
+package dsa
 
 type KeyToValuesStore struct {
 	key    string
