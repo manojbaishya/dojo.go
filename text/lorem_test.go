@@ -21,12 +21,12 @@ func TestGenerateFakeStrings(t *testing.T) {
 	data := GenerateFakeStrings(numOfElements)
 
 	collection := lo.Map(data, func(item string, idx int) string {
-		return fmt.Sprintf("%d. %s", idx, item)
+		return fmt.Sprint(idx, ". ", item)
 	})
 
 	assert.NotNil(collection, "Collection cannot be nil!")
 
-	for _, val := range collection {
-		fmt.Println(val)
+	for i := 0; i < numOfElements; i++ {
+		assert.Equal(fmt.Sprint(i, ". ", data[i]), collection[i])
 	}
 }

@@ -2,8 +2,9 @@ package leetcodedsa
 
 import (
 	"fmt"
-	assertions "github.com/stretchr/testify/assert"
 	"testing"
+
+	assertions "github.com/stretchr/testify/assert"
 )
 
 func TestNewKeyToValuesStore(t *testing.T) {
@@ -41,6 +42,22 @@ func TestValues(t *testing.T) {
 	actual := kv.Values()
 
 	fmt.Println(actual)
+
+	assert.Equal(expected, actual)
+}
+
+func TestToMap(t *testing.T) {
+	assert := assertions.New(t)
+
+	category := "Plants"
+	species := []string{"Hibiscus", "Palm", "Rose", "Gerbera"}
+
+	kv := &KeyToValuesStore{key: category, values: species}
+
+	expected := kv.ToMap()
+	actual := map[string][]string{
+		category: species,
+	}
 
 	assert.Equal(expected, actual)
 }

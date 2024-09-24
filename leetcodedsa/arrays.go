@@ -16,3 +16,11 @@ func (kv *KeyToValuesStore) Key() string {
 func (kv *KeyToValuesStore) Values() []string {
 	return kv.values
 }
+
+func (kv *KeyToValuesStore) ToMap() map[string][]string {
+	m := make(map[string][]string)
+
+	m[kv.Key()] = kv.Values()
+
+	return m
+}
