@@ -8,6 +8,10 @@ import (
 	"github.com/google/uuid"
 )
 
+func Lorem() {
+	textPkg()
+}
+
 func textPkg() {
 	PrintUuids()
 	LoremGenerator()
@@ -42,7 +46,7 @@ func GenerateUuid() string {
 func GenerateFakeStrings(num int) []string {
 	data := make([]string, num)
 	for i := 0; i < num; i++ {
-		data = append(data, faker.Word())
+		data[i] = faker.Word()
 	}
 	return data
 }

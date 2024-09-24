@@ -5,17 +5,17 @@ import (
 	"testing"
 
 	"github.com/samber/lo"
-	"github.com/stretchr/testify/assert"
+	assertions "github.com/stretchr/testify/assert"
 )
 
 func TestGenerateUuid(t *testing.T) {
-	assert := assert.New(t)
+	assert := assertions.New(t)
 	uuidString := GenerateUuid()
 	assert.NotNil(uuidString, "GenerateUuid must always return a value!")
 }
 
 func TestGenerateFakeStrings(t *testing.T) {
-	assert := assert.New(t)
+	assert := assertions.New(t)
 
 	const numOfElements int = 200
 	data := GenerateFakeStrings(numOfElements)

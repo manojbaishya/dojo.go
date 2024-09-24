@@ -16,7 +16,11 @@ func (getterDemo *GetterDemo) Hash() uint64 {
 
 func computeHash(name string, desc string) uint64 {
 	hsh := fnv.New64a()
-	hsh.Write([]byte(fmt.Sprintf("%s-%s", name, desc)))
+	_, err := hsh.Write([]byte(fmt.Sprintf("%s-%s", name, desc)))
+
+	if err != nil {
+		panic(err)
+	}
 
 	hash := hsh.Sum64()
 	return hash
